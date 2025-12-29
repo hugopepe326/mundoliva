@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mundoliva | Aceite de Oliva Virgen Extra Premium</title>
+    <!-- Tailwind CSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Inter & Playfair Display -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              olive: {
+                50: "#f7fee7",
+                100: "#ecfccb",
+                200: "#d9f99d",
+                300: "#bef264",
+                400: "#a3e635",
+                500: "#84cc16",
+                600: "#65a30d",
+                700: "#4d7c0f",
+                800: "#3f6212",
+                900: "#365314",
+              },
+              earth: {
+                50: "#fafaf9",
+                100: "#f5f5f4",
+                200: "#e7e5e4",
+                300: "#d6d3d1",
+                400: "#a8a29e",
+                500: "#78716c",
+                600: "#57534e",
+                700: "#44403c",
+                800: "#292524",
+                900: "#1c1917",
+              },
+            },
+            fontFamily: {
+              sans: ["Inter", "sans-serif"],
+              serif: ["Playfair Display", "serif"],
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      body {
+        font-family: "Inter", sans-serif;
+      }
+      .font-serif {
+        font-family: "Playfair Display", serif;
+      }
+      .glass {
+        background: rgba(255, 255, 255, 0.8);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+      }
+    </style>
+  </head>
+  <body class="bg-earth-50 text-earth-900 overflow-x-hidden">
+    <!-- Header / Navigation -->
+    <header class="fixed w-full top-0 z-50 glass border-b border-earth-100">
+      <div
+        class="max-w-7xl mx-auto px-6 h-20 flex justify-between items-center"
+      >
+        <a href="#" class="flex items-center gap-2 group">
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            class="w-8 h-8 text-olive-600 transition-transform group-hover:rotate-12"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <path
+              d="M12 3a9 9 0 0 0-9 9c0 4.97 4.03 9 9 9s9-4.03 9-9c0-4.97-4.03-9-9-9z"
+            />
+            <path
+              d="M12 8c-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4-1.79-4-4-4z"
+            />
+          </svg>
+          <span
+            class="font-serif text-2xl font-bold text-olive-900 tracking-tight"
+            >Mundoliva</span
+          >
+        </a>
+        <nav class="hidden md:flex items-center space-x-8">
+          <a
+            href="#inicio"
+            class="text-sm font-medium hover:text-olive-700 transition-colors"
+            >Inicio</a
+          >
+          <a
+            href="#productos"
+            class="text-sm font-medium hover:text-olive-700 transition-colors"
+            >Productos</a
+          >
+          <a
+            href="#historia"
+            class="text-sm font-medium hover:text-olive-700 transition-colors"
+            >Historia</a
+          >
+          <a
+            href="#contacto"
+            class="px-5 py-2.5 bg-olive-800 text-white text-sm font-semibold rounded-full hover:bg-olive-900 transition-all shadow-md hover:shadow-lg"
+            >Contacto</a
+          >
+        </nav>
+        <button class="md:hidden text-olive-900" id="mobile-menu-btn">
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            class="w-6 h-6"
+          >
+            <path d="M4 6h16M4 12h16m-7 6h7" />
+          </svg>
+        </button>
+      </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="fixed inset-0 z-40 hidden md:hidden">
+      <div class="absolute inset-0 bg-earth-900/20 backdrop-blur-sm"></div>
+      <div class="absolute right-0 top-0 bottom-0 w-64 bg-white p-8 shadow-2xl">
+        <nav class="flex flex-col space-y-6 pt-12">
+          <a
+            href="#inicio"
+            class="text-xl font-medium text-earth-800"
+            onclick="toggleMenu()"
+            >Inicio</a
+          >
+          <a
+            href="#productos"
+            class="text-xl font-medium text-earth-800"
+            onclick="toggleMenu()"
+            >Productos</a
+          >
+          <a
+            href="#historia"
+            class="text-xl font-medium text-earth-800"
+            onclick="toggleMenu()"
+            >Historia</a
+          >
+          <a
+            href="#contacto"
+            class="text-xl font-medium text-olive-800"
+            onclick="toggleMenu()"
+            >Contacto</a
+          >
+        </nav>
+      </div>
+    </div>
+
+    <main>
+      <!-- Hero Section -->
+      <section id="inicio" class="relative h-[90vh] flex items-center pt-20 overflow-hidden">
+            <div class="absolute inset-0 z-0">
+                <img src="https://images.unsplash.com/photo-1470173274384-c4e8e2f98361?auto=format&fit=crop&w=1950&q=80" alt="Olivar al atardecer" class="w-full h-full object-cover">
+                <div class="absolute inset-0 bg-gradient-to-r from-olive-900/80 via-olive-900/40 to-transparent"></div>
+            </div>
+        <div class="relative z-10 max-w-7xl mx-auto px-6 w-full">
+          <div class="max-w-3xl">
+            <span
+              class="inline-block py-1.5 px-4 bg-amber-500/20 text-amber-300 text-xs font-bold uppercase tracking-widest rounded-full border border-amber-500/30 mb-8 backdrop-blur-md"
+            >
+              Cosecha Temprana 2024
+            </span>
+                         <h1 class="text-6xl md:text-8xl font-serif font-bold text-white mb-8 leading-tight">
+                        La Esencia de los <span class="italic text-amber-100">Valles</span>.
+                    </h1>
+                    <p class="text-xl text-stone-200 mb-12 font-light leading-relaxed max-w-2xl">
+                        Aceite de Oliva Virgen Extra de categoría superior, obtenido en las tierras del sol y del buen aceite. Calidad de exportación directamente a tu mesa.
+                    </p>
+            <div class="flex flex-col sm:flex-row gap-6">
+              <a
+                href="#productos"
+                class="px-10 py-4 bg-amber-600 hover:bg-amber-700 text-white font-bold rounded-lg transition-all text-center shadow-xl hover:-translate-y-1"
+              >
+                Ver Colección
+              </a>
+              <a
+                href="#historia"
+                class="px-10 py-4 border border-white/30 text-white font-bold rounded-lg hover:bg-white/10 transition-all text-center backdrop-blur-sm"
+              >
+                Nuestra Historia
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Trust Indicators -->
+      <section class="py-24 bg-white border-b border-earth-100">
+        <div class="max-w-7xl mx-auto px-6">
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-16">
+            <div class="flex flex-col items-center text-center group">
+              <div
+                class="w-20 h-20 bg-olive-50 text-olive-700 rounded-full flex items-center justify-center mb-6 transition-transform group-hover:scale-110"
+              >
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  class="w-10 h-10"
+                >
+                  <path d="M12 15l-2 5L9 9l11 4-5 2zm0 0l4 8" />
+                </svg>
+              </div>
+              <h3 class="text-xl font-serif font-bold text-earth-800 mb-4">
+                Calidad Certificada
+              </h3>
+              <p class="text-earth-500 leading-relaxed">
+                Todos nuestros aceites pasan rigurosos controles y poseen D.O.P.
+              </p>
+            </div>
+            <div class="flex flex-col items-center text-center group">
+              <div
+                class="w-20 h-20 bg-olive-50 text-olive-700 rounded-full flex items-center justify-center mb-6 transition-transform group-hover:scale-110"
+              >
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  class="w-10 h-10"
+                >
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                </svg>
+              </div>
+              <h3 class="text-xl font-serif font-bold text-earth-800 mb-4">
+                Prensado en Frío
+              </h3>
+              <p class="text-earth-500 leading-relaxed">
+                Extracción a menos de 27ºC para preservar todos los polifenoles.
+              </p>
+            </div>
+            <div class="flex flex-col items-center text-center group">
+              <div
+                class="w-20 h-20 bg-olive-50 text-olive-700 rounded-full flex items-center justify-center mb-6 transition-transform group-hover:scale-110"
+              >
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  class="w-10 h-10"
+                >
+                  <path d="M5 12h14M5 12l4-4m-4 4l4 4" />
+                </svg>
+              </div>
+              <h3 class="text-xl font-serif font-bold text-earth-800 mb-4">
+                Origen Nacional
+              </h3>
+              <p class="text-earth-500 leading-relaxed">
+                Trabajamos directamente con pequeños productores de Mendoza, San Juan, La Rioja y Córdoba.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Featured Products -->
+      <section id="productos" class="py-24 bg-earth-50">
+        <div class="max-w-7xl mx-auto px-6">
+          <div
+            class="flex flex-col md:flex-row justify-between items-end mb-16 gap-6"
+          >
+            <div>
+              <h2
+                class="text-4xl md:text-5xl font-serif font-bold text-olive-900 mb-4"
+              >
+                Nuestra Selección
+              </h2>
+              <p class="text-earth-600 max-w-xl">
+                El resultado de una búsqueda incansable por la perfección
+                líquida.
+              </p>
+            </div>
+            <div class="flex space-x-2">
+              <span
+                class="px-4 py-1.5 bg-olive-800 text-white text-xs font-bold rounded-full cursor-default"
+                >Premium</span
+              >
+              <span
+                class="px-4 py-1.5 bg-white border border-earth-200 text-earth-600 text-xs font-bold rounded-full cursor-default"
+                >Limited Edition</span
+              >
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+            <!-- Product 1 -->
+            <div
+              class="bg-white rounded-2xl shadow-sm hover:shadow-2xl transition-all duration-500 group overflow-hidden flex flex-col"
+            >
+              <div class="h-80 overflow-hidden relative">
+                <img
+                  src="https://images.unsplash.com/photo-1474979266404-7cadd259d366?auto=format&fit=crop&w=800&q=80"
+                  alt="AOVE Picual"
+                  class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                />
+                <div
+                  class="absolute top-4 right-4 bg-olive-900 text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-widest"
+                >
+                  Afrutado
+                </div>
+              </div>
+              <div class="p-8 flex-1 flex flex-col">
+                <h3 class="text-2xl font-serif font-bold text-olive-900 mb-3">
+                  Reserva Familiar Picual
+                </h3>
+                <p class="text-earth-500 text-sm mb-8 flex-1 leading-relaxed">
+                  Notas intensas de tomate y hierba recién cortada. Un clásico
+                  de cuerpo robusto.
+                </p>
+                <div
+                  class="flex items-center justify-between pt-6 border-t border-earth-100"
+                                  <span class="text-2xl font-bold text-olive-800">$18.500</span>
+                  <button
+                    class="p-3 bg-earth-100 text-olive-900 rounded-full hover:bg-olive-800 hover:text-white transition-all"
+                  >
+                    <svg
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      class="w-5 h-5"
+                    >
+                      <path
+                        d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4zM3 6h18m-11 5a2 2 0 1 0 4 0"
+                      />
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <!-- Product 2 -->
+            <div
+              class="bg-white rounded-2xl shadow-sm hover:shadow-2xl transition-all duration-500 group overflow-hidden flex flex-col mt-8 md:mt-0"
+            >
+              <div class="h-80 overflow-hidden relative">
+                <img
+                  src="https://images.unsplash.com/photo-1554907085-b1a77484d509?auto=format&fit=crop&w=800&q=80"
+                  alt="AOVE Arbequina"
+                  class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                />
+                <div
+                  class="absolute top-4 right-4 bg-amber-600 text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-widest text-[#FFF]"
+                >
+                  Suave
+                </div>
+              </div>
+              <div class="p-8 flex-1 flex flex-col">
+                <h3 class="text-2xl font-serif font-bold text-olive-900 mb-3">
+                  Esencia Arbequina
+                </h3>
+                <p class="text-earth-500 text-sm mb-8 flex-1 leading-relaxed">
+                  Delicadas notas de manzana y almendra. Ideal para quienes
+                  buscan suavidad.
+                </p>
+                <div
+                  class="flex items-center justify-between pt-6 border-t border-earth-100"
+                                  <span class="text-2xl font-bold text-olive-800">$15.200</span>
+                  <button
+                    class="p-3 bg-earth-100 text-olive-900 rounded-full hover:bg-olive-800 hover:text-white transition-all"
+                  >
+                    <svg
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      class="w-5 h-5"
+                    >
+                      <path
+                        d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4zM3 6h18m-11 5a2 2 0 1 0 4 0"
+                      />
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <!-- Product 3 -->
+            <div
+              class="bg-white rounded-2xl shadow-sm hover:shadow-2xl transition-all duration-500 group overflow-hidden flex flex-col mt-16 md:mt-0"
+            >
+              <div class="h-80 overflow-hidden relative">
+                <img
+                  src="https://images.unsplash.com/photo-1518206010498-8ec15637996c?auto=format&fit=crop&w=800&q=80"
+                  alt="AOVE Blend"
+                  class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                />
+                <div
+                  class="absolute top-4 right-4 bg-olive-700 text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-widest"
+                >
+                  Equilibrado
+                </div>
+              </div>
+              <div class="p-8 flex-1 flex flex-col">
+                <h3 class="text-2xl font-serif font-bold text-olive-900 mb-3">
+                  Coupage de Autor
+                </h3>
+                <p class="text-earth-500 text-sm mb-8 flex-1 leading-relaxed">
+                  Una mezcla maestra diseñada para potenciar cualquier plato
+                  regional.
+                </p>
+                <div
+                  class="flex items-center justify-between pt-6 border-t border-earth-100"
+                >
+                  <span class="text-2xl font-bold text-olive-800">$21.000</span>
+                  <button
+                    class="p-3 bg-earth-100 text-olive-900 rounded-full hover:bg-olive-800 hover:text-white transition-all"
+                  >
+                    <svg
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      class="w-5 h-5"
+                    >
+                      <path
+                        d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4zM3 6h18m-11 5a2 2 0 1 0 4 0"
+                      />
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Story Section -->
+      <section
+        id="historia"
+        class="py-32 bg-olive-900 text-white overflow-hidden relative"
+      >
+        <div
+          class="absolute top-0 right-0 w-1/3 h-full opacity-10 pointer-events-none"
+        >
+          <svg viewBox="0 0 200 200" class="w-full h-full fill-white">
+            <path
+              d="M44.7,-76.4C58.2,-69.2,70,-58.5,78.2,-45.8C86.3,-33.1,90.8,-18.4,90.6,-3.6C90.4,11.2,85.5,26.1,77.9,39.6C70.3,53.2,60,65.4,47.2,74C34.4,82.5,19.2,87.4,3.7,80.9C-11.8,74.5,-27.5,56.7,-41.8,45.8C-56.2,34.9,-69.1,30.8,-76.9,22.1C-84.7,13.4,-87.3,0.1,-84.9,-12.3C-82.5,-24.8,-75,-36.5,-65.2,-46C-55.4,-55.6,-43.3,-62.9,-30.9,-70.6C-18.4,-78.3,-5.7,-86.3,9.5,-102.8C24.7,-119.3,42.5,-144.1,44.7,-76.4Z"
+              transform="translate(100 100)"
+            />
+          </svg>
+        </div>
+        <div class="max-w-7xl mx-auto px-6 relative z-10">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-24 items-center">
+                    <div class="relative group">
+                        <div class="absolute -inset-4 bg-amber-500/20 rounded-full blur-3xl opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                        <img src="https://images.unsplash.com/photo-1473950901502-383790518349?auto=format&fit=crop&w=1000&q=80" alt="Nuestra Historia" class="rounded-2xl shadow-2xl relative transition-transform duration-500 lg:rotate-2 group-hover:rotate-0">
+                    </div>
+                          <h2 class="text-4xl md:text-5xl font-serif font-bold mb-8 italic">Tradición que se siente.</h2>
+                        <div class="space-y-6 text-olive-100 text-lg leading-relaxed">
+                            <p>Mundoliva no es solo una almazara; es la herencia de tres generaciones dedicadas a entender el lenguaje de los olivos bajo el sol de las tierras cuyanas.</p>
+                            <p>Creemos en el respeto por el tiempo. No aceleramos los procesos naturales, dejamos que cada gota nazca de la paciencia y el cuidado manual en nuestra finca.</p>
+                </p>
+                <ul class="space-y-4 pt-6">
+                  <li class="flex items-center gap-4">
+                    <div
+                      class="w-6 h-6 rounded-full bg-amber-500/20 flex items-center justify-center border border-amber-500/40"
+                    >
+                      <div class="w-2 h-2 rounded-full bg-amber-500"></div>
+                    </div>
+                    <span>Compromiso con la biodiversidad.</span>
+                  </li>
+                  <li class="flex items-center gap-4">
+                    <div
+                      class="w-6 h-6 rounded-full bg-amber-500/20 flex items-center justify-center border border-amber-500/40"
+                    >
+                      <div class="w-2 h-2 rounded-full bg-amber-500"></div>
+                    </div>
+                    <span>Prensado artesanal exclusivo.</span>
+                  </li>
+                  <li class="flex items-center gap-4">
+                    <div
+                      class="w-6 h-6 rounded-full bg-amber-500/20 flex items-center justify-center border border-amber-500/40"
+                    >
+                      <div class="w-2 h-2 rounded-full bg-amber-500"></div>
+                    </div>
+                    <span>Ediciones limitadas numeradas.</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact Form -->
+      <section id="contacto" class="py-32 bg-white relative overflow-hidden">
+        <div class="max-w-4xl mx-auto px-6 relative z-10">
+          <div class="text-center mb-16">
+            <h2
+              class="text-4xl md:text-5xl font-serif font-bold text-olive-900 mb-6"
+            >
+              Hablemos de Excelencia.
+            </h2>
+            <p class="text-earth-600 text-lg">
+              ¿Interesado en nuestras variedades o ventas minoristas? Estamos
+              para asesorarte.
+            </p>
+          </div>
+          <form
+            class="grid grid-cols-1 md:grid-cols-2 gap-8 bg-earth-50 p-12 rounded-3xl border border-earth-100 shadow-sm"
+          >
+            <div class="space-y-2">
+              <label class="text-sm font-semibold text-earth-700 ml-1"
+                >Nombre</label
+              >
+              <input
+                type="text"
+                placeholder="Tu nombre"
+                class="w-full px-6 py-4 rounded-xl bg-white border border-earth-200 outline-none focus:ring-2 focus:ring-olive-500 transition-all"
+              />
+            </div>
+            <div class="space-y-2">
+              <label class="text-sm font-semibold text-earth-700 ml-1"
+                >Email</label
+              >
+              <input
+                type="email"
+                placeholder="hola@ejemplo.com"
+                class="w-full px-6 py-4 rounded-xl bg-white border border-earth-200 outline-none focus:ring-2 focus:ring-olive-500 transition-all"
+              />
+            </div>
+            <div class="md:col-span-2 space-y-2">
+              <label class="text-sm font-semibold text-earth-700 ml-1"
+                >Mensaje</label
+              >
+              <textarea
+                placeholder="Cuéntanos qué necesitas..."
+                rows="4"
+                class="w-full px-6 py-4 rounded-xl bg-white border border-earth-200 outline-none focus:ring-2 focus:ring-olive-500 transition-all resize-none"
+              ></textarea>
+            </div>
+            <div class="md:col-span-2 pt-4">
+              <button
+                class="w-full py-5 bg-olive-900 text-white font-bold rounded-xl hover:bg-black transition-all shadow-xl hover:shadow-2xl"
+              >
+                Enviar Mensaje
+              </button>
+            </div>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-earth-100 pt-24 pb-12 border-t border-earth-200">
+      <div class="max-w-7xl mx-auto px-6">
+        <div
+          class="grid grid-cols-1 md:grid-cols-4 gap-16 mb-20 text-center md:text-left"
+        >
+          <div class="col-span-1 md:col-span-1">
+            <a
+              href="#"
+                    <a href="#" class="flex items-center justify-center md:justify-start gap-2 mb-8">
+                        <svg viewBox="0 0 24 24" fill="none" class="w-6 h-6 text-olive-600" stroke="currentColor" stroke-width="2"><path d="M12 3a9 9 0 0 0-9 9c0 4.97 4.03 9 9 9s9-4.03 9-9c0-4.97-4.03-9-9-9z" /><path d="M12 8c-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4-1.79-4-4-4z" /></svg>
+                        <span class="font-serif text-xl font-bold text-olive-900 tracking-tight">Mundoliva</span>
+                    </a>
+                    <p class="text-earth-600 text-sm leading-relaxed max-w-xs mx-auto md:mx-0">
+                        La esencia de nuestra tierra envasada para los paladares más exigentes.
+                    </p>
+                </div>
+          <div>
+            <h4
+              class="font-serif font-bold text-earth-800 mb-8 uppercase text-xs tracking-widest"
+            >
+              Navegación
+            </h4>
+            <ul class="space-y-4 text-sm text-earth-500">
+              <li>
+                <a href="#inicio" class="hover:text-olive-700 transition-colors"
+                  >Inicio</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#productos"
+                  class="hover:text-olive-700 transition-colors"
+                  >Productos</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#historia"
+                  class="hover:text-olive-700 transition-colors"
+                  >Historia</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#contacto"
+                  class="hover:text-olive-700 transition-colors"
+                  >Contacto</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h4
+              class="font-serif font-bold text-earth-800 mb-8 uppercase text-xs tracking-widest"
+            >
+              Legales
+            </h4>
+            <ul class="space-y-4 text-sm text-earth-500">
+              <li>
+                <a href="#" class="hover:text-olive-700 transition-colors"
+                  >Privacidad</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:text-olive-700 transition-colors"
+                  >Términos</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:text-olive-700 transition-colors"
+                  >Envíos</a
+                >
+              </li>
+            </ul>
+          </div>
+                <div>
+                    <h4 class="font-serif font-bold text-earth-800 mb-8 uppercase text-xs tracking-widest">Ubicación</h4>
+                    <p class="text-sm text-earth-500 leading-relaxed">
+                        Km 42, Ruta del Sol<br>Mendoza, Argentina<br><br>
+                        <span class="font-semibold text-olive-800">+54 261 123 4567</span>
+                    </p>
+                </div>
+        </div>
+        <div
+          class="pt-8 border-t border-earth-200 flex flex-col md:flex-row justify-between items-center gap-6"
+        >
+          <p class="text-xs text-earth-400">
+            © 2024 Mundoliva. Creado con pasión por el aceite.
+          </p>
+          <div class="flex space-x-6">
+            <a
+              href="#"
+              class="text-earth-400 hover:text-olive-600 transition-colors text-xs font-semibold uppercase tracking-widest"
+              >Instagram</a
+            >
+            <a
+              href="#"
+              class="text-earth-400 hover:text-olive-600 transition-colors text-xs font-semibold uppercase tracking-widest"
+              >Facebook</a
+            >
+            <a
+              href="#"
+              class="text-earth-400 hover:text-olive-600 transition-colors text-xs font-semibold uppercase tracking-widest"
+              >LinkedIn</a
+            >
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      const menuBtn = document.getElementById("mobile-menu-btn");
+      const menu = document.getElementById("mobile-menu");
+
+      function toggleMenu() {
+        menu.classList.toggle("hidden");
+        document.body.classList.toggle("overflow-hidden");
+      }
+
+      menuBtn.addEventListener("click", toggleMenu);
+    </script>
+  </body>
+</html>
